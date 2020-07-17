@@ -18,7 +18,7 @@ catching_eggs_02.py
 catching_eggs_library.py 
   - functions used in main files
 
-three versions of haarcascade classifier: \ 
+three versions of haarcascade classifier: \
 haarcascade / haarcascade_banana_01.xml \
 haarcascade / haarcascade_banana_02.xml \
 haarcascade / haarcascade_banana_03.xml 
