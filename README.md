@@ -7,7 +7,7 @@ object detection (in our case 'banana') in real time using webcam
 ### Versions
 catching_eggs_01.py 
   - object detection using YOLO method 
-  - need to download model configuration file and weights from https://pjreddie.com/darknet/yolo/
+  - need to download model configuration file and weights from https://pjreddie.com/darknet/yolo/ \
     (yolov3-320.cfg, yolov3-320.weights or yolov3-tiny.cfg, yolov3-tiny.cfg)
   
 catching_eggs_02.py 
