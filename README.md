@@ -14,6 +14,9 @@ catching_eggs_02.py
  - object detection using custom cascade classifier
  - cascade classifier has been trained using Cascade-Trainer-GUI https://amin-ahmadi.com/cascade-trainer-gui/
  
+ catching_eggs_03.py
+  - object detection using color detection
+ 
 ### Files
 catching_eggs_library.py 
   - functions used in main files
