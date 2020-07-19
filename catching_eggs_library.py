@@ -111,6 +111,7 @@ def randomizer():
 
 
 def detectObject(outputs, img, classNames, confidThreshold, nmsThreshold, thing):
+# for YOLO version
     ht, wt, ct = img.shape
     boundbox = []
     classIds = []
@@ -149,3 +150,19 @@ def eggInBasket(egg, basket):
     if (xe > xb) and (xe < xb + wb) and (ye > yb) and (ye < yb + hb):
         ret = True
     return ret
+
+
+def getBoundingBox(img, lower, upper):
+# for color based detection version
+    imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    imgMask = cv2.inRange(imgHSV, lower, upper)
+    contours, hierarchy = cv2.findContours(imgMask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    x,y,w,h = 0, 0, 0, 0
+    for cont in contours:
+        area = cv2.contourArea(cont)
+        if area > 500:
+            peri = cv2.arcLength(cont, True)
+            approx = cv2.approxPolyDP(cont, 0.02*peri, True)
+            x,y,w,h = cv2.boundingRect(approx)
+    return (x,y,w,h)
+
